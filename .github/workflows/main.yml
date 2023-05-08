@@ -1,0 +1,30 @@
+name: Update Submodule
+
+on:
+  schedule:
+    # Run every day at 00:00 UTC
+    - cron: '0 0 * * *'
+
+jobs:
+  update-submodule:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        submodules: 'recursive'
+
+    - name: Update submodule
+      run: |
+        cd _posts
+        git checkout main
+        git pull
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.email "bot@angst.blog"
+        git config --global user.name "Automated Angst Bot"
+        git add _posts
+        git commit -m "Update submodule posts"
+        git push
