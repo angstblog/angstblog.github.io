@@ -6,32 +6,10 @@
 
     <div id="content">
       {% for post in site.posts %}
-      <article>
-        <div class="post-metadata">
-          <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-          <br>
-          <span class="post-title">{{ post.title | capitalize }}</span>
-        </div>
-        {% if post.author %}
-          {% assign author_data = site.data.authors[post.author] %}
-          {% assign other_author = site.data.authors | where_exp: "author", "author[0] != post.author" | first %}
-          {% if other_author %}
-            <p>Dear {{ other_author.name | capitalize }},</p>
-          {% endif %}
+        {% include post.html %}
+        {% if forloop.last == false %}
+          <div class="post-break"></div>
         {% endif %}
-        <div class="post-content">
-          {{ post.content }}
-        </div>
-        {% if post.author %}
-          {% if other_author %}
-            <p>Love,</p>
-            <p>{{ author_data.name | capitalize }}</p>
-          {% endif %}
-        {% endif %}
-      </article>
-      {% if forloop.last == false %}
-        <div class="post-break"></div>
-      {% endif %}
       {% endfor %}
     </div>
 
