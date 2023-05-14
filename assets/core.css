@@ -5,7 +5,7 @@ html {
   padding: 3em 1em;
   margin: auto;
   line-height: 1.75;
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 body {
@@ -25,7 +25,6 @@ body {
 .post-metadata {
   text-align: right;
   max-width: 50%;
-  margin: 0 auto;
 }
 
 .post-metadata .post-date {
@@ -34,4 +33,16 @@ body {
 
 .post-metadata .post-title {
   font-style: italic;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+}
+
+a:hover {
+  opacity: 1;
 }
