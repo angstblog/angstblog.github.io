@@ -66,6 +66,7 @@ blockquote {
 
 .post-signature .post-author {
   font-weight: bold;
+  margin-right: 4ch;
 }
 
 .post-signature .love {
