@@ -26,6 +26,14 @@ a:hover {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
+.post-content p:first-child {
+  text-indent: 0;
+}
+
+.post-content p:not(:first-child) {
+  text-indent: 2em;
+}
+
 .post-metadata {
   text-align: right;
   max-width: 50%;

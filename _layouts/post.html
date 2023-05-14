@@ -7,8 +7,8 @@
     <div id="content">
       <article>
         <div class="post-metadata">
-          <span class="post-date"><p>{{ post.date | date: "%b %-d, %Y" }}</p></span>
-          <span class="post-title"><p>{{ post.title | capitalize }}</p></span>
+          <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <span class="post-title">{{ post.title | capitalize }}</span>
         </div>
         {% if post.author %}
           {% assign author_data = site.data.authors[post.author] %}
@@ -17,7 +17,9 @@
             <p>Dear {{ other_author.name | capitalize }},</p>
           {% endif %}
         {% endif %}
-        {{ content }}
+        <div class="post-content">
+          {{ content }}
+        </div>
         {% if post.author %}
           {% if other_author %}
             <p>Love,</p>
