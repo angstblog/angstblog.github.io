@@ -1,8 +1,16 @@
 <article>
   <div class="post-metadata">
-    <span class="post-date">{{ include.post.date | date: "%A, %B %-d, %Y" }}</span>
+    {% if include.post.date %}
+      <span class="post-date">{{ include.post.date | date: "%A, %B %-d, %Y" }}</span>
+    {% elsif include.page.date %}
+      <span class="post-date">{{ include.page.date | date: "%A, %B %-d, %Y" }}</span>
+    {% endif %}
     <br>
-    <span class="post-title">{{ include.post.title | capitalize }}</span>
+    {% if include.post.title %}
+      <span class="post-title">{{ include.post.title | capitalize }}</span>
+    {% elsif include.page.title %}
+      <span class="post-title">{{ include.page.title | capitalize }}</span>
+    {% endif %}
   </div>
   {% if include.post.author %}
     {% assign author_data = site.data.authors[include.post.author] %}
