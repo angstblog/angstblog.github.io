@@ -6,18 +6,26 @@
   </div>
   {% if include.post.author %}
     {% assign author_data = site.data.authors[include.post.author] %}
-    {% assign other_author = site.data.authors | where_exp: "author", "author != include.post.author" | first %}
-    {% if other_author %}
-      <p>Dear {{ other_author.name | capitalize }},</p>
-    {% endif %}
+  {% elsif include.page.author %}
+    {% assign author_data = site.data.authors[include.page.author] %}
+  {% endif %}
+
+  {% if author_data %}
+    {% assign other_author = site.data.authors | where: "name", "!=", author_data.name | first %}
+  {% endif %}
+
+  {% if other_author %}
+      <p>{{ other_author.name | capitalize }},</p>
   {% endif %}
   <div class="post-content">
-    {{ include.post.content }}
-  </div>
-  {% if include.post.author %}
-    {% if other_author %}
-      <p>Love,</p>
-      <p>{{ author_data.name | capitalize }}</p>
+    {% if include.post.content %}
+      {{ include.post.content }}
+    {% elsif include.page.content %}
+      {{ include.page.content }}
     {% endif %}
+  </div>
+  {% if author_data %}
+    <p>Love,</p>
+    <p>{{ author_data.name | capitalize }}</p>
   {% endif %}
 </article>
