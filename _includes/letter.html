@@ -7,9 +7,9 @@
     {% endif %}
     <br>
     {% if include.post.title %}
-      <span class="post-title">{{ include.post.title | capitalize }}</span>
+      <span class="post-title">{{ include.post.title }}</span>
     {% elsif include.page.title %}
-      <span class="post-title">{{ include.page.title | capitalize }}</span>
+      <span class="post-title">{{ include.page.title }}</span>
     {% endif %}
   </div>
   {% if include.post.author %}

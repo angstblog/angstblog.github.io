@@ -34,7 +34,7 @@ a:hover {
   text-indent: 4ch;
 }
 
-blockquote {
+blockquote p {
   text-indent: 0;
 }
 
