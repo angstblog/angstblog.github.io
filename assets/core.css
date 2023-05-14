@@ -46,3 +46,9 @@ a {
 a:hover {
   opacity: 1;
 }
+
+.post-break {
+  height: 2px;
+  background-color: #000;
+  margin: 1em 0;
+}

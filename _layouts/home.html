@@ -26,6 +26,9 @@
           {% endif %}
         {% endif %}
       </article>
+      {% if forloop.last == false %}
+        <div class="post-break"></div>
+      {% endif %}
       {% endfor %}
     </div>
 
