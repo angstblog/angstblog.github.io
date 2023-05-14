@@ -11,7 +11,11 @@
   {% endif %}
 
   {% if author_data %}
-    {% assign other_author = site.data.authors | where: "name", "!=", author_data.name | first %}
+    {% if author_data.name == 'Stella' %}
+      {% assign other_author = site.data.authors['galen'] %}
+    {% elsif author_data.name == 'Galen' %}
+      {% assign other_author = site.data.authors['stella'] %}
+    {% endif %}
   {% endif %}
 
   {% if other_author %}
