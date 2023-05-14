@@ -26,11 +26,11 @@ a:hover {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-.post-content p:first-child {
+.post-content p {
   text-indent: 0;
 }
 
-.post-content p:not(:first-child) {
+.post-content p:first-child {
   text-indent: 2em;
 }
 
