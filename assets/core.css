@@ -31,13 +31,14 @@ a:hover {
 }
 
 .post-content p:first-child {
-  text-indent: 2em;
+  text-indent: 4ch;
 }
 
 .post-metadata {
   text-align: right;
   max-width: 50%;
-  margin: 0;
+  margin-left: auto;
+  margin-right: 0;
   line-height: 1;
 }
 
