@@ -30,6 +30,7 @@ a:hover {
   text-align: right;
   max-width: 50%;
   margin: 0;
+  line-height: 1;
 }
 
 .post-metadata .post-date {
