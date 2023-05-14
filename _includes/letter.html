@@ -1,0 +1,24 @@
+<article>
+    <div class="post-metadata">
+      <span class="post-date">{{ letter.date | date: "%b %-d, %Y" }}</span>
+      <br>
+      <span class="post-title">{{ letter.title | capitalize }}</span>
+    </div>
+    {% if letter.author %}
+      {% assign author_data = site.data.authors[letter.author] %}
+      {% assign other_author = site.data.authors | where_exp: "author", "author != letter.author" | first %}
+      {% if other_author %}
+        <p>Dear {{ other_author.name | capitalize }},</p>
+      {% endif %}
+    {% endif %}
+    <div class="post-content">
+      {{ letter.content }}
+    </div>
+    {% if letter.author %}
+      {% if other_author %}
+        <p>Love,</p>
+        <p>{{ author_data.name | capitalize }}</p>
+      {% endif %}
+    {% endif %}
+  </article>
+  
