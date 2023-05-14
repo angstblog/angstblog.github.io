@@ -60,6 +60,18 @@ blockquote {
   margin: 2em 0;
 }
 
+.post-signature {
+  text-align: right;
+}
+
+.post-signature .post-author {
+  font-weight: bold;
+}
+
+.post-signature .love {
+  margin-right: 8ch;
+}
+
 
 @media (prefers-color-scheme: dark) {
   body {

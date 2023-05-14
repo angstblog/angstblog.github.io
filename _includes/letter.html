@@ -29,7 +29,10 @@
     {% endif %}
   </div>
   {% if author_data %}
-    <p>Love,</p>
-    <p>{{ author_data.name | capitalize }}</p>
+    <div class="post-signature">
+      <span class="love">Love,</span>
+      <br>
+      <span class="post-author">{{ author_data.name | capitalize }}</span>
+    </div>
   {% endif %}
 </article>
