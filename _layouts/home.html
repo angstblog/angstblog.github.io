@@ -6,7 +6,7 @@
 
     <div id="content">
       {% for post in site.posts %}
-        {% include post.html %}
+        {% include post.html post=post %}
         {% if forloop.last == false %}
           <div class="post-break"></div>
         {% endif %}
