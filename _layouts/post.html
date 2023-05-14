@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ post.lang | default: site.lang | default: "en" }}">
+  {%- include head.html -%}
+  <body>
+    {% include header.html %}
+
+    <div id="content">
+      <article>
+        {% if post.author %}
+          {% assign author_data = site.data.authors[post.author] %}
+          {% assign other_author = site.data.authors | where_exp: "author", "author[0] != post.author" | first %}
+          {% if other_author %}
+            <p>Dear {{ other_author.name | capitalize }},</p>
+          {% endif %}
+        {% endif %}
+        {{ content }}
+        {% if post.author %}
+          {% if other_author %}
+            <p>Love, {{ author_data.name }}</p>
+          {% endif %}
+        {% endif %}
+      </article>
+    </div>
+
+    {% include footer.html %}
+  </body>
+</html>
