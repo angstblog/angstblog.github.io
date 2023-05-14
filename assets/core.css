@@ -26,22 +26,6 @@ a:hover {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #fff;
-    background-color: #000;
-  }
-
-  a {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  a:hover {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  }
-}
-
 .post-metadata {
   text-align: right;
   max-width: 50%;
@@ -58,6 +42,26 @@ a:hover {
 
 .post-break {
   height: 2px;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.5);
   margin: 2em 0;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #fff;
+    background-color: #000;
+  }
+
+  a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  a:hover {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .post-break {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
 }
