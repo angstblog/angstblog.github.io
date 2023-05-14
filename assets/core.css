@@ -1,23 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 html {
-    max-width: 70ch;
-    padding: 3em 1em;
-    margin: auto;
-    line-height: 1.75;
-    font-size: 1.25em;
-  }
-  
+  max-width: 70ch;
+  padding: 3em 1em;
+  margin: auto;
+  line-height: 1.75;
+  font-size: 1.25em;
+}
+
+body {
+  color: #000;
+  background-color: #fff;
+  word-wrap: break-word;
+  font-family: 'Courier Prime', monospace;
+}
+
+@media (prefers-color-scheme: dark) {
   body {
-    color: #000;
-    background-color: #fff;
-    word-wrap: break-word;
-    font-family: 'Courier Prime', monospace;
+    color: #fff;
+    background-color: #000;
   }
-  
-  @media (prefers-color-scheme: dark) {
-    body {
-      color: #fff;
-      background-color: #000;
-    }
-  }
+}
+
+.post-metadata {
+  text-align: right;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.post-metadata .post-date {
+  font-weight: bold;
+}
+
+.post-metadata .post-title {
+  font-style: italic;
+}
