@@ -26,15 +26,8 @@ a:hover {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-.site-title h1 {
+.site-title {
   font-weight: bold;
-  margin-bottom: 0.5em;
-  text-align: center;
-}
-
-.site-title h2 {
-  font-weight: normal;
-  margin-top: 0;
   text-align: center;
 }
 
@@ -64,6 +57,10 @@ blockquote p:first-child {
 
 .post-metadata .post-title {
   font-style: italic;
+}
+
+.post-metadata a {
+  border-bottom: none;
 }
 
 .post-break {
