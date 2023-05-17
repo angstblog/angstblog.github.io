@@ -29,6 +29,15 @@ a:hover {
 .site-title {
   font-weight: bold;
   text-align: center;
+  margin-bottom: 4em;
+}
+
+.site-title h1 {
+  line-height: 1;
+}
+
+.site-title p {
+  font-size: 0.75em;
 }
 
 .post-content p {
