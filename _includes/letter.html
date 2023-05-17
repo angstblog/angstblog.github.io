@@ -1,9 +1,9 @@
 <article>
   <div class="post-metadata">
     {% if include.post.date %}
-      <span class="post-date">{{ include.post.date | date: "%A, %B %-d, %Y" }}</span>
+      <span class="post-date"><a href="{{ include.post.permalink }}">{{ include.post.date | date: "%A, %B %-d, %Y" }}</a></span>
     {% elsif include.page.date %}
-      <span class="post-date">{{ include.page.date | date: "%A, %B %-d, %Y" }}</span>
+    <span class="post-date"><a href="{{ include.page.permalink }}">{{ include.page.date | date: "%A, %B %-d, %Y" }}</a></span>
     {% endif %}
     <br>
     {% if include.post.title %}

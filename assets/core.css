@@ -26,6 +26,18 @@ a:hover {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
+.site-title h1 {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.site-title h2 {
+  font-weight: normal;
+  margin-top: 0;
+  text-align: center;
+}
+
 .post-content p {
   text-indent: 0;
 }
@@ -34,7 +46,7 @@ a:hover {
   text-indent: 4ch;
 }
 
-blockquote p {
+blockquote p:first-child {
   text-indent: 0;
 }
 
