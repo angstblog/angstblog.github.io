@@ -6,6 +6,4 @@ updates:
         interval: "daily"
     directory: /
     allow:
-      - dependency-name: ".*"
-        dependency-type: "all"
-        update-type: "all"
+      - dependency-type: "all"
